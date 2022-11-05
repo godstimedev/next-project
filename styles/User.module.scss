@@ -1,0 +1,89 @@
+@import 'variables';
+
+.user {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	padding: 1rem 1.5rem 3rem 1.5rem;
+
+	.user_content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		.user_header {
+			color: #fff;
+		}
+
+		.user_nav {
+			width: fit-content;
+			border-bottom: 1px solid rgba($color: #fff, $alpha: 0.4);
+			display: flex;
+			gap: 2rem;
+
+			color: #fff;
+			a {
+				opacity: 0.6;
+				padding-bottom: 1rem;
+				margin-bottom: -0.09rem;
+			}
+			a.active {
+				opacity: 1;
+				border-bottom: 2px solid #a017e3;
+			}
+		}
+
+		.form {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.3rem;
+			margin-bottom: 2rem;
+			@media (max-width: 920px) {
+				grid-template-columns: 1fr;
+			}
+
+			label {
+				position: relative;
+				flex: 1;
+				color: rgba($color: #fff, $alpha: 0.6);
+				font-size: 0.8rem;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				input {
+					color: #fff;
+					width: 100%;
+					outline: none;
+					background: inherit;
+					border: 1px solid rgba($color: #fff, $alpha: 0.4);
+					border-radius: 5px;
+					padding: 0.8rem 1.2rem;
+				}
+				.input_link {
+					position: absolute;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-self: flex-end;
+					right: 0;
+					margin-top: 0.85rem;
+					margin-right: 1.5rem;
+					color: #9386b5;
+				}
+			}
+		}
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		.button__state_warning {
+			@include buttonStyle(#eb3868);
+		}
+		.button__state_purple {
+			@include buttonStyle(#a017e3);
+		}
+	}
+}

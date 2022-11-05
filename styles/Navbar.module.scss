@@ -1,0 +1,35 @@
+.navbar {
+	background-color: #2e375e;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 3rem 0;
+	flex-shrink: 0;
+	width: 13.75rem;
+	@media (max-width: 800px) {
+		display: none !important;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+		margin-top: 3rem;
+
+		a {
+			opacity: 0.6;
+			li {
+				font-size: 0.95rem;
+				color: white;
+				padding: 0.7rem 2rem 0.7rem 2rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+		}
+		a.active {
+			opacity: 1;
+		}
+	}
+}

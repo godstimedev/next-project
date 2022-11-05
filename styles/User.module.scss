@@ -71,6 +71,10 @@
 					margin-top: 0.85rem;
 					margin-right: 1.5rem;
 					color: #9386b5;
+					font-size: 0.8rem;
+					// &:hover, &:focus{
+
+					// }
 				}
 			}
 		}
@@ -78,7 +82,12 @@
 
 	.buttons {
 		display: flex;
+
 		justify-content: space-between;
+		@media (max-width: 720px) {
+			gap: 1rem;
+			font-size: 0.85rem;
+		}
 		.button__state_warning {
 			@include buttonStyle(#eb3868);
 		}

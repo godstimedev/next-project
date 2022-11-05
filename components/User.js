@@ -33,16 +33,12 @@ function User() {
 					<label>
 						<p>Password</p>
 						<input type="password" name="password" />
-						<a className={styles.input_link} href="#">
-							Change Password
-						</a>
+						<p className={styles.input_link}>Change Password</p>
 					</label>
 					<label>
 						<p>Phone Number</p>
 						<input type="tel" name="phone" />
-						<a className={styles.input_link} href="#">
-							Change Number
-						</a>
+						<p className={styles.input_link}>Change Number</p>
 					</label>
 				</form>
 			</div>
